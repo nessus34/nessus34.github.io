@@ -1,0 +1,245 @@
+/* variable */
+
+:root {
+    --red: rgb(230, 24, 24);
+    --lightgrey: rgb(228, 228, 228);
+    --darkgrey: rgb(37, 37, 37);
+    --white: rgb(255, 255, 255);
+    --shadow: rgb(153, 148, 148);
+}
+
+
+/* general */
+
+body {
+    padding: 40px 30px;
+}
+
+p,
+.btn,
+h5,
+li {
+    font-family: 'Lato', sans-serif;
+    color: var(--darkgrey);
+}
+
+p,
+.btn,
+h5 {
+    text-transform: uppercase;
+}
+
+.btn {
+    background-color: transparent;
+    border-color: transparent;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+i {
+    color: var(--red);
+    padding-right: 15px;
+}
+
+
+/* style */
+
+#new-game {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+#tournament {
+    padding: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+#first-player-grid,
+#dice-grid,
+#second-player-grid {
+    grid-column: 1/9;
+    text-align: center;
+    padding: 5px;
+}
+
+.players-name-container {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.players-name {
+    font-size: 2.5em;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+.players-total-container {
+    padding: 5px;
+    vertical-align: top;
+}
+
+.players-total {
+    color: var(--red);
+    font-size: 5em;
+    font-weight: 300;
+    height: 1em;
+    line-height: 1em;
+    margin-bottom: 30px;
+}
+
+.players-current-container {
+    background-color: var(--red);
+    padding: 5px 0;
+    font-size: 1em;
+}
+
+.players-current-container p {
+    margin-bottom: 0;
+}
+
+.players-current {
+    color: var(--white);
+    font-size: 2.6em;
+    font-weight: 300;
+}
+
+.dice-container {
+    padding: 25px;
+}
+
+.dice {
+    background-color: var(--white);
+    box-shadow: 0px 0px 20px 0px var(--shadow);
+    height: 140px;
+    width: 140px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10%;
+}
+
+
+/* dice */
+
+.dot {
+    background-color: var(--red);
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.dice-column {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.face-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face-2,
+.face-3,
+.face-4,
+.face-5,
+.face-6 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.face-2 .dot:nth-child(2),
+.face-3 .dot:nth-child(3) {
+    align-self: flex-end;
+}
+
+.face-3 .dot:nth-child(2) {
+    align-self: center;
+}
+
+.face-5 .dice-column:nth-of-type(2) {
+    justify-content: center;
+}
+
+
+/* js*/
+
+.turn-player-1 {
+    background: linear-gradient(180deg, var(--lightgrey) 50%, var(--white) 50%);
+}
+
+.turn-player-2 {
+    background: linear-gradient(180deg, var(--white) 50%, var(--lightgrey) 50%);
+}
+
+.dot-current-player {
+    height: 15px;
+    width: 15px;
+    background-color: var(--red);
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.font-current-player {
+    font-weight: 400;
+}
+
+
+/* responsive */
+
+@media screen and (min-width: 990px) {
+    .btn {
+        font-size: 1.4em;
+    }
+    #new-game {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    #first-player-grid {
+        grid-column: 1/4;
+    }
+    .players-name-container {
+        margin-top: 50px;
+    }
+    .players-name {
+        font-size: 3em;
+    }
+    .players-total-container {
+        margin-bottom: 100px;
+    }
+    .players-total {
+        font-size: 7em;
+    }
+    .players-current-container {
+        width: 50%;
+        margin: auto;
+    }
+    #dice-grid {
+        grid-column: 4/6;
+    }
+    .dice-container {
+        margin: 95px 0;
+    }
+    .btn-hold-container {
+        margin-top: 30px;
+    }
+    #second-player-grid {
+        grid-column: 6/9;
+    }
+    .turn-player-1 {
+        background: linear-gradient(90deg, var(--lightgrey) 50%, var(--white) 50%);
+    }
+    .turn-player-2 {
+        background: linear-gradient(90deg, var(--white) 50%, var(--lightgrey) 50%);
+    }
+}

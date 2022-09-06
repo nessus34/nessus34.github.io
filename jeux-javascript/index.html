@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="png" href="images/logo.png">
+    <title>Jeux javascript</title>
+
+    <script src="https://kit.fontawesome.com/06ea113519.js" crossorigin="anonymous"></script>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+
+
+<body id="player-background">
+    <section id="new-game">
+        <button type="button" class="btn btn-light" id="btn-new-game">
+            <i class="fas fa-plus-circle fa-lg"></i>
+            Nouvelle partie
+        </button>
+    </section>
+
+    <section id="tournament">
+        <div class="container grid">
+            <div id="first-player-grid">
+
+                <div class="players-name-container">
+                    <p id="first-player-name" class="players-name">
+                        Joueur 1
+                    </p>
+                    <span id="first-player-turn"></span>
+                </div>
+
+                <div class="players-total-container">
+                    <p id="first-player-total" class="players-total">
+                        0
+                    </p>
+                </div>
+
+                <div class="players-current-container">
+                    <p>Score</p>
+                    <p id="first-player-current" class="players-current">
+                        0
+                    </p>
+                </div>
+            </div>
+
+            <div id="dice-grid">
+
+                <div class="dice-container" id="dice-face">
+                    <div class="dice face-6">
+                        <div class="dice-column">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="dice-column">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="button" class="btn btn-light" id="btn-roll">
+                        <i class="fas fa-sync fa-lg"></i>
+                        Relance
+                    </button>
+                </div>
+                <div class="btn-hold-container">
+                    <button type="button" class="btn btn-light" id="btn-hold">
+                        <i class="fas fa-download fa-lg"></i>
+                        Garde
+                    </button>
+                </div>
+            </div>
+
+            <div id="second-player-grid">
+
+                <div class="players-name-container">
+                    <p id="second-player-name" class="players-name">
+                        Joueur 2
+                    </p>
+                    <span id="second-player-turn"></span>
+                </div>
+
+                <div class="players-total-container">
+                    <p id="second-player-total" class="players-total">
+                        0
+                    </p>
+                </div>
+
+                <div class="players-current-container">
+                    <p>Score</p>
+                    <p id="second-player-current" class="players-current">
+                        0
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
